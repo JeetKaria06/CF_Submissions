@@ -1,5 +1,5 @@
 # CF_Submissions_Visualization_Using_Plotly
-One can visualize the submission distribution in codeforces by inputting handle of the user.
+One can visualize the submission distribution in [codeforces](https://codeforces.com/) by inputting handle of the user.
 
 ## Introduction
 The problem that I was facing that I was not able to see the number of problems that I have solved and I obviously can't count it if it has reached above some limit and even there are multiple submissions for each problem and also it is time-consuming. So, I have come up with a solution which not only tells the number of problems that were accepted but also tells the number of unaccepted problems, TLE, MLE, etc. and visualized it using pie-chart.
