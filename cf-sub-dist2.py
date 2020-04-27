@@ -49,10 +49,7 @@ for verdict in set(tot):
         dfSub = dfSub.append({'verdict': verdict, 'tag': tag, 'Number': subNum[verdict]['tag'][tag]}, ignore_index=True)
 
 print(dfSubRate.verdict)
-# fig = px.sunburst(dfSub, values='Number', path=['verdict', 'tag'], title='Codeforces Submission Distribution of '+handle, color='verdict')
-# fig = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])
 fig = px.sunburst(dfSubRate, values='Number', path=['verdict', 'rating'], title='Codeforces Submission Distribution of '+handle, color_discrete_sequence=px.colors.sequential.RdBu)
-# fig.update_layout(uniformtext_minsize=18, uniformtext_mode='hide')
+
 fig.update_layout(margin = dict(l=0, r=0, b=0))
-# fig.update_layout(hole=.4)
 fig.show()
