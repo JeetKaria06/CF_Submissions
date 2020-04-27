@@ -26,12 +26,14 @@ for submission in stat:
         subData[submission['verdict']]['rating'] = {}
         subData[submission['verdict']]['tag'] = {}
     
-    subData[submission['verdict']]['rating'][str(submission['problem']['rating'])] = []
+    if('rating' in submission['problem'].keys()):
+        subData[submission['verdict']]['rating'][str(submission['problem']['rating'])] = []
     for tag in submission['problem']['tags']:
         subData[submission['verdict']]['tag'][tag] = []
 
 for submission in stat:
-    subData[submission['verdict']]['rating'][str(submission['problem']['rating'])].append(submission['problem']['name'])
+    if('rating' in submission['problem'].keys()):
+        subData[submission['verdict']]['rating'][str(submission['problem']['rating'])].append(submission['problem']['name'])
     for tag in submission['problem']['tags']: 
         subData[submission['verdict']]['tag'][tag].append(submission['problem']['name'])
 
