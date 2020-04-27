@@ -39,7 +39,7 @@ for submission in stat:
 
 dfSub = pd.DataFrame({'verdict': [], 'tag': [], 'Number': []})
 dfSubRate = pd.DataFrame({'verdict': [], 'rating': [], 'Number': []})
-print(subData)
+
 for verdict in set(tot):
     subNum[verdict] = subData[verdict]
     for rating in subData[verdict]['rating']:
