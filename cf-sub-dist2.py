@@ -50,7 +50,6 @@ for verdict in set(tot):
         subNum[verdict]['tag'][tag] = len(set(subData[verdict]['tag'][tag]))
         dfSub = dfSub.append({'verdict': verdict, 'tag': tag, 'Number': subNum[verdict]['tag'][tag]}, ignore_index=True)
 
-print(dfSubRate.verdict)
 fig = px.sunburst(dfSubRate, values='Number', path=['verdict', 'rating'], title='Codeforces Submission Distribution of '+handle, color_discrete_sequence=px.colors.sequential.RdBu)
 
 fig.update_layout(margin = dict(l=0, r=0, b=0))
