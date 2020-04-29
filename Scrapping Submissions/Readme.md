@@ -7,7 +7,7 @@ People used to save the files to their PC before making any submissions to any p
 ### Note : In case of multiple submissions it will save the latest submission made.
 
 ## Steps to run
-Suppose the name of the user ```handle``` is ```Jeet_Karia``` and the path to the directory where you want to store all the files is ```D:/Activities/Developer/Test```
+Suppose the name of the user ```handle``` is ```Jeet_Karia``` and the ```path``` to the directory where you want to store all the files is ```D:/Activities/Developer/Test```
 
 ```
 python scrap-cf-sub.py --handle Jeet_Karia --dir D:/Activities/Developer/Test
