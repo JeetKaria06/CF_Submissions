@@ -6,6 +6,13 @@ People used to save the files to their PC before making any submissions to any p
 
 ### Note : In case of multiple submissions it will save the latest submission made.
 
+## Dependencies
+Before running main script run
+```
+pip install -r prerequesites.txt
+```
+to install all of the dependencies
+
 ## Steps to run
 Suppose the name of the user ```handle``` is ```Jeet_Karia``` and the ```path``` to the directory where you want to store all the files is ```D:/Activities/Developer/Test```
 
