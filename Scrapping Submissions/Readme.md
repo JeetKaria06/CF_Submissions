@@ -21,4 +21,4 @@ Done!
 ```
 
 ### Note : In case if it misses any language then it will store that file in .cpp extension and will also display the names of that files in the output.
-Let me know the issues if any.
+Let me know the issues if found any.
