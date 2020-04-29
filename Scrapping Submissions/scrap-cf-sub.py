@@ -55,7 +55,7 @@ for submission in stat:
             
             extension = [key for key, val in lang.items() if plang in val]
             if(extension==[]): 
-                probs.append(submission['problem']['name'])
+                probs.append(str(submission['problem']['contestId'])+submission['problem']['index']+".cpp")
                 extension = [defExt]
 
             file = open(args["dir"]+"/"+str(submission['problem']['contestId'])+submission['problem']['index']+extension[0], "w")   
