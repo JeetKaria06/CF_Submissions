@@ -16,6 +16,6 @@ Supposing you want to visualize the submission distribution of ```Jeet_Karia``` 
 python cf-sub-dist.py --handle Jeet_Karia
 ```
 
-Sample Output is:
+Sample Output in my case is:
 ![Output](https://github.com/JeetKaria06/CF_Submissions_Visualization_Using_Plotly/blob/master/output.png)
 
