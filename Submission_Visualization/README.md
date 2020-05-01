@@ -27,7 +27,7 @@ Then it will give output as pie chart of verdictwise problems and further subdiv
 Sample Output is as below.
 ![Output1](https://github.com/JeetKaria06/CF_Submissions/blob/master/Submission_Visualization/overall.png)
 
-You also can interact the pie chart by clicking on any of the main chart and output of clicking on ```OK``` is shown below.
+You also can interact the pie chart by clicking on any of the main chart's component and output of clicking on ```OK``` is shown below.
 ![Output2](https://github.com/JeetKaria06/CF_Submissions/blob/master/Submission_Visualization/OK.png)
 
 
