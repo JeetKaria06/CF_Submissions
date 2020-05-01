@@ -19,3 +19,15 @@ python cf-sub-dist.py --handle Jeet_Karia
 Sample Output in my case is:
 ![Output](https://github.com/JeetKaria06/CF_Submissions_Visualization_Using_Plotly/blob/master/output.png)
 
+Similarly if you run cf-sub-dist2.py as 
+```
+python cf-sub-dist2.py --handle Jeet_Karia
+```
+Then it will give output as pie chart of verdictwise problems and further subdividing it on the basis of the rating of the problem. 
+Sample Output is as below.
+![Output1](https://github.com/JeetKaria06/CF_Submissions/blob/master/Submission_Visualization/overall.png)
+
+You also can interact the pie chart by clicking on any of the main chart and output of clicking on ```OK``` is shown below
+![Output2](https://github.com/JeetKaria06/CF_Submissions/blob/master/Submission_Visualization/OK.png)
+
+
