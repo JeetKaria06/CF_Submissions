@@ -19,7 +19,7 @@ python cf-sub-dist.py --handle Jeet_Karia
 Sample Output in my case is:
 ![Output](https://github.com/JeetKaria06/CF_Submissions_Visualization_Using_Plotly/blob/master/output.png)
 
-Similarly if you run cf-sub-dist2.py as 
+Similarly if you run **cf-sub-dist2.py** as 
 ```
 python cf-sub-dist2.py --handle Jeet_Karia
 ```
