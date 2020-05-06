@@ -11,6 +11,10 @@ args = vars(ap.parse_args())
 handle = args["handle"]
 response = requests.get("https://codeforces.com/api/user.status?handle="+handle+"&from=1")
 
+if(response.status_code==400):
+    print("No such handle exists :( ")
+    exit()
+
 stat = response.json()['result']
 
 tot = []
