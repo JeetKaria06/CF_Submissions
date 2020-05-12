@@ -19,7 +19,8 @@ python cf-sub-dist.py --handle Jeet_Karia
 Sample Output in my case is:
 ![Output](https://github.com/JeetKaria06/CF_Submissions_Visualization_Using_Plotly/blob/master/output.png)
 
-Similarly if you run **cf-sub-dist2.py** as 
+## Nested Submission Distribution with verdict and rating
+If you run **cf-sub-dist2.py** as 
 ```
 python cf-sub-dist2.py --handle Jeet_Karia
 ```
@@ -29,5 +30,19 @@ Sample Output is as below.
 
 You also can interact the pie chart by clicking on any of the chart's main component and output of clicking on ```OK``` is shown below.
 ![Output2](https://github.com/JeetKaria06/CF_Submissions/blob/master/Submission_Visualization/OK.png)
+
+## Nested Submission Distribution with tags, verdict and rating
+If **cf-sub-dist3.py** is run as
+```
+python cf-sub-dist3.py --handle Jeet_Karia
+```
+Then the output generated will be the nested pie chart showing submissions distributed as tags, verdict and ratings as shown below:
+![Output3](https://github.com/JeetKaria06/CF_Submissions/blob/master/Submission_Visualization/overall3.png)
+
+When clicked on the ```math``` the pie-chart turns to as below:
+![Output4](https://github.com/JeetKaria06/CF_Submissions/blob/master/Submission_Visualization/topic3.png)
+
+And when clicking on the verdict ```OK```, output will be as below:
+![Output5](https://github.com/JeetKaria06/CF_Submissions/blob/master/Submission_Visualization/verdict3.png)
 
 
