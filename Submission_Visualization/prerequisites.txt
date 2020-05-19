@@ -1,5 +1,5 @@
+requests==2.23.0
 plotly==4.6.0
 pandas==0.24.2
 jsonschema==3.2.0
-requests==2.23.0
 psutil==3.4.2
