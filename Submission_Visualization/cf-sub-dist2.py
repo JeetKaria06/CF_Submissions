@@ -32,12 +32,16 @@ for submission in stat:
     
     if('rating' in submission['problem'].keys()):
         subData[submission['verdict']]['rating'][str(submission['problem']['rating'])] = []
+    else:
+        subData[submission['verdict']]['rating']['unrated'] = []
     for tag in submission['problem']['tags']:
         subData[submission['verdict']]['tag'][tag] = []
 
 for submission in stat:
     if('rating' in submission['problem'].keys()):
         subData[submission['verdict']]['rating'][str(submission['problem']['rating'])].append(submission['problem']['name'])
+    else:
+        subData[submission['verdict']]['rating']['unrated'].append(submission['problem']['name'])
     for tag in submission['problem']['tags']: 
         subData[submission['verdict']]['tag'][tag].append(submission['problem']['name'])
 
@@ -48,7 +52,10 @@ for verdict in set(tot):
     subNum[verdict] = subData[verdict]
     for rating in subData[verdict]['rating']:
         subNum[verdict]['rating'][rating] = len(set(subData[verdict]['rating'][rating]))
-        dfSubRate = dfSubRate.append({'verdict': verdict, 'rating': rating, 'Number': subNum[verdict]['rating'][rating]}, ignore_index=True)
+        if rating=='unrated':
+            dfSubRate = dfSubRate.append({'verdict': verdict, 'rating': "UNRATED", 'Number': subNum[verdict]['rating'][rating]}, ignore_index=True)
+        else:
+            dfSubRate = dfSubRate.append({'verdict': verdict, 'rating': rating, 'Number': subNum[verdict]['rating'][rating]}, ignore_index=True)
 
     for tag in subData[verdict]['tag']:
         subNum[verdict]['tag'][tag] = len(set(subData[verdict]['tag'][tag]))
