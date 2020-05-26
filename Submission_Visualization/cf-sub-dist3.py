@@ -3,7 +3,6 @@ import json
 import argparse
 import plotly.express as px
 import pandas as pd
-from plotly.subplots import make_subplots
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-handle", "--handle", required=True, help="Handle of the user whose details you are looking for.")
@@ -29,7 +28,9 @@ for submission in stat:
         if submission['verdict'] not in subDict[tag].keys():
             subDict[tag][submission['verdict']] = {}
         if 'rating' in submission['problem'].keys():
-            subDict[tag][submission['verdict']][str(submission['problem']['rating'])] = []  
+            subDict[tag][submission['verdict']][str(submission['problem']['rating'])] = []
+        else:
+            subDict[tag][submission['verdict']]['unrated'] = []
 
 # print(subDict)
 
@@ -37,6 +38,8 @@ for submission in stat:
     for tag in submission['problem']['tags']:
         if 'rating' in submission['problem'].keys():
             subDict[tag][submission['verdict']][str(submission['problem']['rating'])].append(submission['problem']['name'])
+        else:
+            subDict[tag][submission['verdict']]['unrated'].append(submission['problem']['name'])
 
 subData = {}
 dfSub = pd.DataFrame({'tag': [], 'verdict': [], 'rating': [], 'number': []})
@@ -46,14 +49,16 @@ for tag in subDict:
     for verdict in subDict[tag]:
         for rating in subDict[tag][verdict]:
             subData[tag][verdict][rating] = len(set(subDict[tag][verdict][rating]))
-            dfSub = dfSub.append({'tag': tag, 'verdict': verdict, 'rating': rating, 'number': subData[tag][verdict][rating]}, ignore_index=True)
+            if rating == 'unrated':
+                dfSub = dfSub.append({'tag': tag, 'verdict': verdict, 'rating': 'UNRATED', 'number': subData[tag][verdict][rating]}, ignore_index=True)
+            else:
+                dfSub = dfSub.append({'tag': tag, 'verdict': verdict, 'rating': rating, 'number': subData[tag][verdict][rating]}, ignore_index=True)
 
 print(dfSub)
 
 fig = px.sunburst(dfSub, values='number', path=['tag', 'verdict', 'rating'], title='Codeforces Submission Distribution of '+handle)
 # fig.update_layout(uniformtext_minsize=18, uniformtext_mode='hide')
 fig.update_layout(margin = dict(l=0, r=0, b=0))
-# fig.update_layout(hole=.4)
 fig.show()
 
 
